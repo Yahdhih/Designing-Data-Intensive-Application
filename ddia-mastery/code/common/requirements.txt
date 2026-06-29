@@ -1,0 +1,18 @@
+# Dépendances Python pour ddia-mastery
+# Installation : pip install -r code/common/requirements.txt
+
+# Bases de données
+psycopg[binary]>=3.1.18        # Client Postgres (API asynchrone + synchrone)
+redis>=5.0.3                    # Client Redis
+pymongo>=4.7.0                  # Client MongoDB
+
+# Kafka / streaming
+confluent-kafka>=2.3.0          # Client Kafka haute performance (librdkafka)
+
+# Tests
+pytest>=8.1.0
+pytest-asyncio>=0.23.0
+
+# Utilitaires
+rich>=13.7.0                    # Affichage coloré dans le terminal (tableaux, logs)
+numpy>=1.26.0                   # Calculs numériques (percentiles, stats)

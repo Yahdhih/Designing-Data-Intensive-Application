@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:16.3
+    container_name: ddia-postgres
+    environment:
+      POSTGRES_USER: ddia
+      POSTGRES_PASSWORD: ddia
+      POSTGRES_DB: ddia
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ddia -d ddia"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - ddia-net
+
+  redis:
+    image: redis:7.2.5
+    container_name: ddia-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ddia-net
+
+volumes:
+  pg_data:
+
+networks:
+  ddia-net:
+    name: ddia-mastery_default
