@@ -1,127 +1,107 @@
-# PROGRESS.md — Suivi quotidien
+# Progression
 
-## Compteur de série (streak)
+## Ch.1 — Fiabilité, Scalabilité, Maintenabilité
 
-```
-Jours consécutifs : ___
-Meilleure série   : ___
-Dernier jour fait : ___
-```
+- [ ] Jour 01 — Préface + Introduction
+- [ ] Jour 02 — Ch.1 : Reliability (pannes matérielles, logicielles, humaines)
+- [ ] Jour 03 — Ch.1 : Scalability (charge, Twitter, percentiles)
+- [ ] Jour 04 — Ch.1 : Maintainability + résumé Ch.1
 
-**Règle anti-décrochage :**
-- Si tu sautes **1 jour** → reprends simplement le lendemain, sans doubler.
-- Si tu sautes **2 jours** → reprends et lis `setup/toolbox.md §Anti-décrochage`.
-- Si tu sautes **1 semaine** → recommence au dernier jour de revue hebdo (pas depuis le début).
+## Ch.2 — Modèles de données
+
+- [ ] Jour 05 — Ch.2 : Modèle relationnel vs document
+- [ ] Jour 06 — Ch.2 : Langages de requête
+- [ ] Jour 07 — Ch.2 : Modèles en graphe + résumé Ch.2
+- [ ] Jour 08 — 🔁 Revue semaine 1 (Ch.1 + Ch.2)
+
+## Ch.3 — Stockage et récupération
+
+- [ ] Jour 09 — Ch.3 : Hash indexes + SSTables
+- [ ] Jour 10 — Ch.3 : LSM-Trees + B-Trees
+- [ ] Jour 11 — Ch.3 : Comparaison B-Tree vs LSM + autres index
+- [ ] Jour 12 — Ch.3 : OLTP vs OLAP + stockage colonne
+- [ ] Jour 13 — 🔁 Revue Ch.3
+
+## Ch.4 — Encodage
+
+- [ ] Jour 14 — Ch.4 : JSON/XML/binaire, Thrift, Protobuf
+- [ ] Jour 15 — Ch.4 : Avro + flux de données + résumé Ch.4
+- [ ] Jour 16 — 🔁 Revue semaine 3 (Ch.3 + Ch.4)
+
+## Ch.5 — Réplication
+
+- [ ] Jour 17 — Ch.5 : Leader-follower (mise en place)
+- [ ] Jour 18 — Ch.5 : Problèmes de décalage de réplication
+- [ ] Jour 19 — Ch.5 : Réplication multi-leader
+- [ ] Jour 20 — Ch.5 : Réplication sans leader (Dynamo, quorums)
+- [ ] Jour 21 — Ch.5 : Résumé + 🔁 revue Ch.5
+
+## Ch.6 — Partitionnement
+
+- [ ] Jour 22 — Ch.6 : Partitionnement par plage + par hash
+- [ ] Jour 23 — Ch.6 : Index secondaires partitionnés (scatter-gather vs global)
+- [ ] Jour 24 — Ch.6 : Rééquilibrage + routage des requêtes
+- [ ] Jour 25 — Exercice de conception + 🔁 revue Ch.6
+
+## Ch.7 — Transactions
+
+- [ ] Jour 26 — Ch.7 : ACID + single-object vs multi-object
+- [ ] Jour 27 — Ch.7 : Niveaux d'isolation faibles — Read Committed
+- [ ] Jour 28 — Ch.7 : Snapshot Isolation + MVCC
+- [ ] Jour 29 — Ch.7 : Lost Updates (4 solutions)
+- [ ] Jour 30 — Ch.7 : Write Skew + Phantoms
+- [ ] Jour 31 — Ch.7 : Sérialisabilité — 2PL + SSI
+- [ ] Jour 32 — Exercice de conception : système de réservation
+- [ ] Jour 33 — 🔁 Revue Ch.7
+
+## Ch.8 — Problèmes des systèmes distribués
+
+- [ ] Jour 34 — Ch.8 : Réseaux non fiables
+- [ ] Jour 35 — Ch.8 : Horloges non fiables
+- [ ] Jour 36 — Ch.8 : Processus qui gèlent + vérité et connaissance
+- [ ] Jour 37 — 🔁 Revue Ch.8 + prédictions Ch.9
+
+## Ch.9 — Consistance et Consensus
+
+- [ ] Jour 38 — Ch.9 : Linéarisabilité
+- [ ] Jour 39 — Ch.9 : Ordre causal + Total Order Broadcast
+- [ ] Jour 40 — Ch.9 : Algorithmes de consensus (Raft, 2PC) + résumé
+- [ ] Jour 41 — 🔁 Revue Ch.9 + revue Partie II complète
+- [ ] Jour 42 — 🔁 Grande synthèse Partie I + Partie II
+
+## Ch.10 — Batch Processing
+
+- [ ] Jour 43 — Ch.10 : MapReduce + philosophie Unix
+- [ ] Jour 44 — Ch.10 : Joins et groupements dans MapReduce
+- [ ] Jour 45 — Ch.10 : Au-delà de MapReduce (Spark, Flink) + résumé
+- [ ] Jour 46 — 🔁 Revue Ch.10 + prédictions Ch.11
+
+## Ch.11 — Stream Processing
+
+- [ ] Jour 47 — Ch.11 : Systèmes de messagerie + Kafka log-based
+- [ ] Jour 48 — Ch.11 : CDC + Event Sourcing
+- [ ] Jour 49 — Ch.11 : Temps, fenêtres, watermarks
+- [ ] Jour 50 — Ch.11 : Lambda vs Kappa + résumé + 🔁 revue Ch.11
+
+## Ch.12 — Le futur des systèmes de données
+
+- [ ] Jour 51 — Ch.12 : Intégration des données + vues dérivées
+- [ ] Jour 52 — Ch.12 : Concevoir autour du dataflow (CQRS, unbundling)
+- [ ] Jour 53 — Ch.12 : Correctness, contraintes, éthique + résumé
+- [ ] Jour 54 — 🔁 Revue Partie III (Ch.10 + Ch.11 + Ch.12)
+
+## Synthèse finale
+
+- [ ] Jour 55 — Synthèse DDIA 1/2 : Parties I et II (grande carte mentale)
+- [ ] Jour 56 — Synthèse DDIA 2/2 : Partie III + vision globale
+- [ ] Jour 57 — Exercice de conception : détection de fraude en temps réel
+- [ ] Jour 58 — Quiz DDIA : 20 questions sur les 12 chapitres
+- [ ] Jour 59 — Questions d'entretien technique (6 questions système design)
+- [ ] Jour 60 — Révision ciblée sur les lacunes
+- [ ] Jour 61 — Conception finale : analytics platform musicale
+- [ ] Jour 62 — Retour aux origines : relire Ch.1 avec de nouveaux yeux
+- [ ] Jour 63 — 🏁 Bilan final et plan de consolidation
 
 ---
 
-## Phase 0 — Mise en route
-
-| Jour | Date | Activité | ✅ | Note libre |
-|------|------|----------|---|-----------|
-| 001 | | 🔧 Setup : édition · Docker · venv · TOC · Anki | ☐ | |
-| 002 | | 📖 Ch.1 — Fiabilité (fault vs failure) | ☐ | |
-| 003 | | 🛠️ Jouet : percentiles p50/p95/p99 en Python | ☐ | |
-| 004 | | 📖 Ch.1 — Scalabilité + Maintenabilité | ☐ | |
-
-## Phase 1 — Fondations (Partie I)
-
-| Jour | Date | Activité | ✅ | Note libre |
-|------|------|----------|---|-----------|
-| 005 | | 📖 Ch.2 — Modèle relationnel vs document | ☐ | |
-| 006 | | 📖 Ch.2 — Modèle graphe + langages de requête | ☐ | |
-| **007** | | **🔁 REVUE HEBDO #1** | ☐ | |
-| 008 | | 🧪 Labo — Postgres vs MongoDB | ☐ | |
-| 009 | | 📖 Ch.3 — Hash index + SSTables + compaction | ☐ | |
-| 010 | | 📖 Ch.3 — B-trees + OLTP vs OLAP | ☐ | |
-| 011 | | 🛠️ Jouet — Bitcask (log + index hachage) | ☐ | |
-| 012 | | 🛠️ Jouet — mini-LSM (SSTables + compaction) | ☐ | |
-| 013 | | 📄 Article — Bigtable / LSM-Tree | ☐ | |
-| **014** | | **🔁 REVUE HEBDO #2** | ☐ | |
-| 015 | | 🛠️ Jouet — mini-B-tree | ☐ | |
-| 016 | | 🧪 Labo — Postgres EXPLAIN + types d'index | ☐ | |
-| 017 | | 📖 Ch.3 — Stockage en colonnes (OLAP) | ☐ | |
-| 018 | | 📖 Ch.4 — Encodage : JSON/Thrift/Protobuf/Avro | ☐ | |
-| 019 | | 📖 Ch.4 — Compatibilité + modes de dataflow | ☐ | |
-| 020 | | 🛠️ Jouet — Encodeur binaire + évolution schéma | ☐ | |
-| **021** | | **🔁 REVUE HEBDO #3** | ☐ | |
-| 022 | | 🧪 Labo — Protobuf Python + évolution champ | ☐ | |
-| 023 | | 🛠️ Exercice « conçois X » — Stockage de journalisation | ☐ | |
-| 024 | | 📄 Article — The Log (Jay Kreps) | ☐ | |
-| 025 | | 📖 Consolidation Ch.3-4 — tradeoffs enrichis | ☐ | |
-| 026 | | 🛠️ Re-dériver de mémoire : LSM vs B-tree | ☐ | |
-| 027 | | 📖 Consolidation Phase 1 — teach-back | ☐ | |
-| **028** | | **🔁 REVUE HEBDO #4** | ☐ | |
-
-## Phase 2 — Données distribuées (Partie II) ← LE CŒUR
-
-| Jour | Date | Activité | ✅ | Note libre |
-|------|------|----------|---|-----------|
-| 029 | | 📖 Ch.5 — Réplication mono-leader + lag | ☐ | |
-| 030 | | 📖 Ch.5 — Anomalies de réplication | ☐ | |
-| 031 | | 🛠️ Jouet — Simulateur mono-leader + anomalies | ☐ | |
-| 032 | | 📖 Ch.5 — Multi-leader + conflits | ☐ | |
-| 033 | | 📖 Ch.5 — Sans leader + quorums | ☐ | |
-| 034 | | 🛠️ Jouet — Simulateur quorum W+R>N | ☐ | |
-| **035** | | **🔁 REVUE HEBDO #5** | ☐ | |
-| 036 | | 📄 Article — Dynamo | ☐ | |
-| 037 | | 🧪 Labo — Postgres streaming replication + lag | ☐ | |
-| 038 | | 🧪 Labo — Cassandra cohérence ONE/QUORUM/ALL | ☐ | |
-| 039 | | 🛠️ Exercice « conçois X » — Fil d'actualité | ☐ | |
-| 040 | | 📖 Synthèse réplication | ☐ | |
-| 041 | | 🛠️ Redessine toutes les topologies | ☐ | |
-| **042** | | **🔁 REVUE HEBDO #6** | ☐ | |
-| 043 | | 📖 Ch.6 — Partitionnement par range vs hash | ☐ | |
-| 044 | | 📖 Ch.6 — Hachage cohérent + nœuds virtuels | ☐ | |
-| 045 | | 🛠️ Jouet — Anneau de hachage cohérent | ☐ | |
-| 046 | | 📖 Ch.6 — Index secondaires + routage | ☐ | |
-| 047 | | 🧪 Labo — Sharding Postgres | ☐ | |
-| 048 | | 📖 Synthèse partitionnement | ☐ | |
-| **049** | | **🔁 REVUE HEBDO #7** | ☐ | |
-| 050 | | 📖 Ch.7 — ACID | ☐ | |
-| 051 | | 📖 Ch.7 — Read uncommitted + read committed | ☐ | |
-| 052 | | 📖 Ch.7 — Snapshot isolation + MVCC + write skew | ☐ | |
-| 053 | | 📖 Ch.7 — Sérialisabilité : 2PL + SSI | ☐ | |
-| 054 | | 🛠️ Jouet — KV MVCC + snapshot isolation | ☐ | |
-| 055 | | 🛠️ Jouet — Démonstration anomalies | ☐ | |
-| **056** | | **🔁 REVUE HEBDO #8** | ☐ | |
-| 057 | | 📄 Article — Critique ANSI SQL Isolation Levels | ☐ | |
-| 058 | | 🧪 Labo — Postgres isolation levels + lost update | ☐ | |
-| 059 | | 🧪 Labo — Postgres SELECT FOR UPDATE / SSI | ☐ | |
-| 060 | | 🛠️ Exercice « conçois X » — Réservation sans double-booking | ☐ | |
-| 061 | | 📖 Synthèse transactions | ☐ | |
-| 062 | | 🛠️ Redessine hiérarchie isolation | ☐ | |
-| **063** | | **🔁 REVUE HEBDO #9** | ☐ | |
-| 064 | | 📖 Ch.8 — Réseaux non fiables + détection de panne | ☐ | |
-| 065 | | 📖 Ch.8 — Horloges : NTP + TrueTime | ☐ | |
-| 066 | | 📖 Ch.8 — Horloges Lamport + vectorielles | ☐ | |
-| 067 | | 🛠️ Jouet — Lamport + vecteur clocks + causalité | ☐ | |
-| 068 | | 📄 Article — Time, Clocks (Lamport 1978) | ☐ | |
-| 069 | | 🧪 Labo — Injection latence réseau (tc netem) | ☐ | |
-| **070** | | **🔁 REVUE HEBDO #10** | ☐ | |
-| 071 | | 📖 Ch.9 — Linéarisabilité + modèles de cohérence | ☐ | |
-| 072 | | 📖 Ch.9 — Total order broadcast + 2PC | ☐ | |
-| 073 | | 📖 Ch.9 — Paxos (vue haut niveau) + intro Raft | ☐ | |
-| 074 | | 📖 Ch.9 — Raft : élection + log + sécurité | ☐ | |
-| 075 | | 🛠️ Jouet — mini-Raft : élection de leader | ☐ | |
-| 076 | | 🛠️ Jouet — mini-Raft : log + commit + fencing | ☐ | |
-| **077** | | **🔁 REVUE HEBDO #11** | ☐ | |
-| 078 | | 📄 Article — Raft (Ongaro & Ousterhout 2014) | ☐ | |
-| 079 | | 📄 Article — Paxos Made Simple (Lamport 2001) | ☐ | |
-| 080 | | 🧪 Labo — etcd : élection + verrous + watch | ☐ | |
-| 081 | | 📖/🧪 ZooKeeper recipes | ☐ | |
-| 082 | | 📄 Article — Jepsen analysis | ☐ | |
-| 083 | | 🛠️ Exercice « conçois X » — base distribuée forte cohérence | ☐ | |
-| **084** | | **🔁 REVUE HEBDO #12** — Bilan Partie II | ☐ | |
-
-## Phase 3 — Données dérivées (Partie III)
-
-| Jour | Date | Activité | ✅ | Note libre |
-|------|------|----------|---|-----------|
-| 085-112 | | Phase 3 — Batch + Stream + Futur | ☐ | voir PLAN.md |
-
-## Phase 4 — Synthèse & capstone
-
-| Jour | Date | Activité | ✅ | Note libre |
-|------|------|----------|---|-----------|
-| 113-126 | | Phase 4 — Capstone + design exercises + revue finale | ☐ | voir PLAN.md |
+Streak actuel : ___/63

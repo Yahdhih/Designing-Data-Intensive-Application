@@ -1,81 +1,38 @@
-# DDIA Mastery — Système d'étude quotidien
+# DDIA — Lecture quotidienne
 
-**Livre :** *Designing Data-Intensive Applications* (DDIA)  
-**Auteurs :** Martin Kleppmann (1ʳᵉ éd. 2017) · Kleppmann & Riccomini (2ᵉ éd. 2026)  
-**Rythme :** 1 heure par jour · **Durée estimée :** 5-8 mois (Partie II seule ≈ 2 mois bien tassés)
+**Livre :** *Designing Data-Intensive Applications* (Kleppmann)  
+**Rythme :** 1 heure par jour
 
----
+## Comment utiliser ce dépôt
 
-## Mode d'emploi quotidien
-
-1. Ouvre `PROGRESS.md` → trouve le prochain jour non coché.
-2. Ouvre `days/day-NNN.md`.
-3. Suis les instructions minute par minute.
-4. Coche ✅ dans `PROGRESS.md` avant de fermer.
-
----
-
-## Les 3 règles d'or
-
-**(a) Predict-then-verify.**  
-Avant de lire une section, écris 2 lignes sur ce que tu anticipes. Sans cette friction, la lecture passive ne laisse aucune trace durable.
-
-**(b) Si je ne peux pas le réimplémenter ou le redessiner de mémoire, je ne l'ai pas compris.**  
-La lecture seule ne suffit pas. Chaque concept clé doit être redécrit avec tes propres mots, dessiné à la main ou codé en jouet.
-
-**(c) Règle des 2 jours.**  
-Ne jamais sauter 2 jours de suite. Si tu sautes un jour, **ne double pas la dose** — reprends simplement le lendemain. La régularité bat l'intensité.
-
----
-
-## Structure du dépôt
-
-| Dossier | Contenu |
-|---------|---------|
-| `days/` | Un fichier par jour — exactement quoi faire en 1 heure, minuté |
-| `setup/` | Environnement, calibration TOC, boîte à outils méthodologique |
-| `reference/` | Glossaire, matrices de compromis, notes quotidiennes, schémas |
-| `flashcards/` | Cartes Anki importables `.tsv` + consignes « page blanche » |
-| `code/` | Implémentations jouets Python (± Go) par thème |
-| `labs/` | Labos Docker (Postgres, Kafka, Cassandra, etcd, Debezium…) |
-| `papers/` | Articles fondateurs cartés par chapitre + fiches de lecture |
-| `reviews/` | Gabarit de revue hebdomadaire (chaque 7ᵉ jour) |
-| `PLAN.md` | Curriculum complet : phases, grappes, jouets, labos, articles |
-| `PROGRESS.md` | Suivi jour par jour + compteur de série (streak) |
-
----
-
-## Deux éditions — note importante
-
-Ce dépôt gère les **deux éditions** :
-- **1ʳᵉ éd. (2017, Kleppmann)** : 12 chapitres, la version canonique que possède la plupart des lecteurs.
-- **2ᵉ éd. (2026, Kleppmann & Riccomini)** : chapitres réorganisés, cloud-natif, stockage objet comme modèle dominant, streaming → vues incrémentales.
-
-**Ton premier geste :** déclare ton édition dans `setup/00-setup.md` et remplis `reference/toc.md` avec ta vraie table des matières. Tous les fichiers-jours utilisent des placeholders `p. ___` à calibrer sur ta TOC réelle.
-
-Si tu lis la **1ʳᵉ éd.**, les encarts **📌 Contexte 2026** dans les fichiers-jours te rappellent les évolutions récentes (stockage objet, Materialize, cloud-natif).
-
----
-
-## Profil de l'apprenant (mémorisé dans le plan)
-
-Tu es étudiant ingénieur HPC / Big Data / Data Engineering. Stack connue : **Spark, Kafka, OpenSearch, Docker, Kubernetes** · Python, Java, C/C++, OCaml. Le plan exploite ton expérience Kafka/Spark à fond en Phase 3, et ne ré-explique pas Docker.
-
----
-
-## Étendre le plan
-
-Quand tu arrives à la fin des jours générés, lance dans Claude Code :
+Chaque jour est un **dossier** :
 ```
-Génère days/day-022.md à day-042.md selon PLAN.md et PROGRESS.md.
+day-01/
+  README.md   →  Ce que tu fais aujourd'hui (lecture + exercices)
+  notes.md    →  Tes notes personnelles (tu remplis ça)
+day-02/
+  ...
 ```
 
----
+1. Ouvre `PROGRESS.md` → trouve le prochain jour non coché
+2. Ouvre `day-XX/README.md` → suis les instructions
+3. Remplis `day-XX/notes.md` avec tes réponses
+4. Coche ✅ dans `PROGRESS.md`
 
-## Méthode en 5 lignes
+## Rythme quotidien
 
-1. **Rappel actif** avant de lire (5 min page blanche ou cartes dues).
-2. **Predict-then-verify** à chaque section.
-3. **Alterner** lecture / jouet / labo / article — jamais 3 lectures d'affilée.
-4. **Consolider** 15 min : résumé en tes mots + 2-3 cartes + 1 schéma + 1 question ouverte.
-5. **Revue hebdo** chaque 7ᵉ jour : pas de matière neuve, redessine et réexplique tout.
+| Temps | Activité |
+|-------|----------|
+| 5 min | Rappel actif (qu'est-ce que j'ai lu hier ?) |
+| 40 min | Lecture de la section du jour |
+| 15 min | Exercices de compréhension |
+
+## Règle d'or
+
+**Predict-then-verify.** Avant chaque section, écris 2-3 phrases sur ce que tu anticipes. La friction entre ta prédiction et la réalité est ce qui ancre le concept en mémoire.
+
+## Référence
+
+- [PLAN.md](PLAN.md) — programme des 63+ jours
+- [PROGRESS.md](PROGRESS.md) — ta progression
+- [reference/glossary.md](reference/glossary.md) — termes clés
